@@ -1,0 +1,5 @@
+@import url(../vendor/normalize.css);
+
+* {
+  outline: 1px solid red;
+}
