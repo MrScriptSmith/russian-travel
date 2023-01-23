@@ -1,4 +1,17 @@
 @import url(../vendor/normalize.css);
+@import url(../vendor/fonts/fonts.css);
+
+.page {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #2A2C2F;
+}
+
+.header {
+
+}
+
+
 
 * {
   outline: 1px solid red;
