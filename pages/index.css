@@ -4,6 +4,7 @@
 
 .page {
   width: 100%;
+  min-width: 320px;
   max-width: 1280px;
   max-height: 6875px;
   background-color: #2A2C2F;
@@ -11,16 +12,17 @@
   overflow: hidden;
   box-sizing: border-box;
   margin: auto;
-  display: flex;
+  color: white;
+
 }
 
 .header {
-  width: 100%;
   max-width: 1184px;
   max-height: 52px;
   display: flex;
   justify-content: space-between;
   margin: 28px 48px 0;
+
 }
 
 @media all and (max-width: 768px) {
@@ -58,11 +60,10 @@
   color: white;
   width: 30px;
   height: 28px;
-  font-family: 'Inter';
+  font-family: 'Inter', Arial, sans-serif;
   font-weight: 400;
   font-size: 24px;
   line-height: 1.17;
-
 }
 
 @media all and (max-width: 320px) {
@@ -75,11 +76,98 @@
   }
 }
 
-
 .header__lang-link_active {
   text-decoration-line: underline;
 }
 
+.content {
+
+}
+
+.lead {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 56px;
+}
+
+.lead__title {
+  text-align: center;
+  margin: 0;
+  max-width: 720px;
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 900;
+  font-size: 96px;
+  line-height: 1.04;
+  margin-bottom: 32px;
+}
+
+@media all and (max-width: 720px) {
+  .lead__title {
+    max-width: 320px;
+    font-family: 'Inter', Arial, sans-serif;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+}
+
+.lead__subtitle {
+  text-align: center;
+  margin: 0;
+  max-width: 640px;
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight:400;
+  font-size: 30px;
+  line-height: 1.2;
+  margin-bottom: 64px;
+}
+
+@media all and (max-width: 720px) {
+  .lead__subtitle {
+    max-width: 320px;
+    font-family: 'Inter', Arial, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    margin-bottom: 40px;
+  }
+}
+
+.lead__image-with-capture {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 984px;
+}
+
+@media all and (max-width: 1150px) {
+  .lead__image-with-capture {
+    max-width: calc(100% - 48px * 2);
+  }
+}
+
+@media all and (max-width: 1000px) {
+  .lead__image-with-capture {
+    max-width: 100%;
+  }
+}
+
+
+.lead__image {
+
+}
+
+.lead__caption {
+  margin: 0;
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1.4;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
 
 * {
   outline: 1px solid red;
