@@ -4,15 +4,19 @@
 
 .page {
   width: 100%;
-  min-width: 320px;
+  /* min-width: 320px; - надо разобраться, появляется скролл*/
   max-width: 1280px;
   max-height: 6875px;
   background-color: #2A2C2F;
   font-family: 'Inter', Arial, sans-serif;
-  /* overflow: hidden; */
+  /* overflow-x: hidden; */
   box-sizing: border-box;
-  margin: auto;
+  /* margin: auto; - надо подумать*/
   color: white;
+  /* display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center; */
 
 }
 
@@ -83,14 +87,15 @@
 .content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 .lead {
+  /* max-width: 100%; */
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 56px;
+
 }
 
 .lead__title {
@@ -142,6 +147,8 @@
   flex-direction: column;
   gap: 8px;
   max-width: 984px;
+
+
 }
 
 @media all and (max-width: 1150px) {
@@ -176,6 +183,7 @@
   max-width: 690px;
   display: flex;
   flex-direction: column;
+
 }
 
 @media all and (max-width: 1150px) {
@@ -248,24 +256,78 @@
 }
 
 .photo-grid {
-  margin: auto;
+  display: flex;
+  justify-content: center;
+	padding-top: 92px;
 }
+
+@media all and (max-width: 1000px) {
+  .photo-grid {
+    padding-top: 88px;
+  }
+}
+
 .photo-grid__items {
+  max-width: 100%;
   margin: 0;
   padding: 0;
+  /* padding: 0 48px; */
   list-style-type: none;
   display: grid;
-  grid-template-columns: repeat(4, auto);
-  grid-template-rows: repeat(auto-fit, auto);
+  grid-template-columns: repeat(auto-fit, minmax(284px, 1fr));
   gap: 16px;
+
+}
+
+@media all and (max-width: 1150px) {
+  .photo-grid__items {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 14px;
+  }
+}
+
+@media all and (max-width: 1000px) {
+  .photo-grid__items {
+    grid-template-columns: repeat(auto-fit, minmax(352px, 1fr));
+    gap: 16px;
+  }
+}
+
+@media all and (max-width: 370px) {
+  .photo-grid__items {
+    grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
+    gap: 12px;
+  }
 }
 
 .photo-grid__item {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  /* height: 100%; */
+  /* object-fit: contain; */
+  display: block;
 }
-
+.places {
+  padding-top: 92px;
+  max-width: 984px;
+  display: flex;
+  flex-direction: column;
+}
+.place {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.place__title {
+}
+.place__image {
+}
+.place__website {
+}
+.place__url-heading {
+}
+.place__link {
+}
+.place__paragraph {
+}
 
 * {
   outline: 1px solid red;
