@@ -11,7 +11,7 @@
   font-family: 'Inter', Arial, sans-serif;
   /* overflow-x: hidden; */
   box-sizing: border-box;
-  /* margin: auto; - надо подумать*/
+  margin: auto;
   color: white;
   /* display: flex;
   flex-direction: column;
@@ -78,10 +78,6 @@
     font-size: 18px;
     line-height: 1.11;
   }
-}
-
-.header__lang-link_active {
-  text-decoration-line: underline;
 }
 
 .content {
@@ -308,6 +304,7 @@
 }
 .places {
   padding-top: 92px;
+  margin: auto;
   max-width: 984px;
   display: flex;
   flex-direction: column;
@@ -315,18 +312,68 @@
 .place {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+  "title website"
+  "image paragraph_1"
+  "image paragraph_2";
 }
 .place__title {
+  grid-area: title;
+  margin: 0;
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 900;
+  font-size: 72px;
+  line-height: 1.06;
+
 }
 .place__image {
+  grid-area: image;
+  max-width: 460px;
 }
 .place__website {
+  grid-area: website;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
 }
 .place__url-heading {
+  grid-area: url;
+  margin: 0 0 12px;
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 2px;
+  color: #aaa;
 }
 .place__link {
+  grid-area: link;
+  margin: 0;
+  text-decoration: none;
+  color: white;
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.22;
 }
+
+.link_active {
+  text-decoration-line: underline;
+}
+
 .place__paragraph {
+  grid-area: paragraph_1;
+  margin: 0;
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.63;
+}
+
+.place__paragraph:nth-last-of-type(2) {
+  grid-area: paragraph_2;
 }
 
 * {
