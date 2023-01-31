@@ -4,20 +4,11 @@
 
 .page {
   width: 100%;
-  /* min-width: 320px; - надо разобраться, появляется скролл*/
   max-width: 1280px;
-  /* max-height: 6875px; */
   background-color: #2A2C2F;
   font-family: 'Inter', Arial, sans-serif;
-  /* overflow-x: hidden; */
-  /* box-sizing: border-box; */
   margin: auto;
   color: white;
-  /* display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: center; */
-
 }
 
 .header {
@@ -28,7 +19,7 @@
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .header {
     margin: 28px 24px 0;
   }
@@ -92,6 +83,12 @@
 
 }
 
+@media (max-width: 1150px) {
+  .lead {
+    padding-top: 48px;
+  }
+}
+
 .lead__title {
   text-align: center;
   margin: 0;
@@ -101,6 +98,7 @@
   line-height: 1.04;
   margin-bottom: 32px;
 }
+
 
 @media (max-width: 720px) {
   .lead__title {
@@ -120,6 +118,12 @@
   font-size: 30px;
   line-height: 1.2;
   margin-bottom: 64px;
+}
+
+@media (max-width: 1150px) {
+  .lead__subtitle {
+    margin-bottom: 56px;
+  }
 }
 
 @media (max-width: 720px) {
@@ -152,12 +156,26 @@
 }
 
 .lead__caption {
+  margin: 0;
   font-weight: 400;
   font-size: 10px;
   line-height: 1.4;
   letter-spacing: 1.5px;
   text-transform: uppercase;
 }
+
+@media (max-width: 1000px) {
+  .lead__caption {
+    padding-left: 24px;
+  }
+}
+
+@media (max-width: 350px) {
+  .lead__caption {
+    padding-left: 16px;
+  }
+}
+
 
 .intro {
   padding-left: 148px;
@@ -200,7 +218,7 @@
 @media (max-width: 350px) {
   .intro__title {
     font-size: 32px;
-    line-height: 1.19;
+    line-height: 1.09;
     }
   }
 
@@ -234,6 +252,12 @@
 @media (max-width: 1000px) {
   .photo-grid {
     padding-top: 88px;
+  }
+}
+
+@media (max-width: 370px) {
+  .photo-grid {
+    padding-top: 64px;
   }
 }
 
@@ -292,7 +316,7 @@
   .places {
     max-width: calc(100% - 24px * 2);
     margin: 0 auto 90px;
-		gap: 73px;
+		gap: 72px;
   }
 }
 
@@ -352,6 +376,10 @@
   line-height: 1.06;
 }
 
+.place__title:first-child {
+  white-space: pre-line;
+}
+
 @media (max-width: 1000px) {
   .place__title {
     font-size: 42px;
@@ -365,6 +393,9 @@
 		margin: 0 auto;
     font-size: 32px;
     line-height: 1.09;
+  }
+  .place__title:first-child {
+    white-space: normal;
   }
 }
 
