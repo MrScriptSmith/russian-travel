@@ -1,8 +1,8 @@
-.clickable {
+.link_clickable {
   opacity: 1;
   transition: opacity 0.3s ease;
 }
 
-.clickable:hover {
+.link_clickable:hover {
   opacity: .33;
 }

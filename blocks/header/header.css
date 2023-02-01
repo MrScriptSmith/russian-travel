@@ -1,0 +1,19 @@
+.header {
+  max-height: 52px;
+  display: flex;
+  justify-content: space-between;
+  margin: 28px 48px 0;
+}
+
+@media (max-width: 1000px) {
+  .header {
+    margin: 28px 24px 0;
+  }
+}
+
+@media (max-width: 350px) {
+  .header {
+    margin: 16px 16px 0;
+    max-height: 42px;
+  }
+}

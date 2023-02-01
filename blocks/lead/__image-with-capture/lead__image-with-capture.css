@@ -1,0 +1,18 @@
+.lead__image-with-capture {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 100%;
+}
+
+@media (max-width: 1150px) {
+  .lead__image-with-capture {
+    max-width: calc(100% - 48px * 2);
+  }
+}
+
+@media (max-width: 1000px) {
+  .lead__image-with-capture {
+    max-width: 100%;
+  }
+}

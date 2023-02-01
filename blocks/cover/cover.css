@@ -1,0 +1,30 @@
+.cover {
+  background: no-repeat center/cover url(/images/__background.png);
+  max-width: 1184px;
+  max-height: 740px;
+  height: 100vh;
+  width: 100%;
+	margin: 0 auto;
+  position: relative;
+}
+
+@media (max-width: 1200px) {
+  .cover {
+    max-width: 1024px;
+    max-height: 640px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .cover {
+    max-width: 768px;
+    max-height: 480px;
+  }
+}
+
+@media (max-width: 450px) {
+  .cover {
+    max-width: 320px;
+    max-height: 200px;
+  }
+}
