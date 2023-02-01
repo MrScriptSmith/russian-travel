@@ -1,5 +1,5 @@
 .cover {
-  background: no-repeat center/cover url(/images/__background.png);
+  background: no-repeat center/cover url(../../images/__background.png);
   max-width: 1184px;
   max-height: 740px;
   height: 100vh;
