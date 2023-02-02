@@ -1,4 +1,5 @@
 .lead__image-with-capture {
+  margin: 0;
   display: flex;
   flex-direction: column;
   gap: 8px;
